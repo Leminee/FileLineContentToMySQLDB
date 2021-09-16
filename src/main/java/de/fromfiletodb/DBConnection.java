@@ -17,8 +17,8 @@ public class DBConnection {
             String dbUrl = "jdbc:mysql://localhost:" + dbPort + "/" + databaseName + "?autoReconnect=true&serverTimezone=UTC";
             connection = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
 
-        } catch (SQLException sqlEx) {
-            System.out.println(sqlEx.getMessage());
+        } catch (SQLException sqlException) {
+            System.out.println(sqlException.getMessage());
         }
     }
 
